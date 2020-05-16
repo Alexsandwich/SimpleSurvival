@@ -1,6 +1,7 @@
 package me.alexander;
 
 import me.alexander.commands.Fly;
+import me.alexander.commands.SetSpawn;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -10,6 +11,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.security.Permission;
 
 public class SimpleSurvival extends JavaPlugin {
+
+    public DataManager data;
 
     private static SimpleSurvival instance;
     FileConfiguration config = this.getConfig();
@@ -23,6 +26,9 @@ public class SimpleSurvival extends JavaPlugin {
     public void onEnable() {
         Bukkit.getConsoleSender().sendMessage(ChatColor.GREEN + "Simple Survival Version: " + getDescription().getVersion() + " has been enabled");
         this.getCommand("fly").setExecutor(new Fly(this));
+        this.getCommand("setspawn").setExecutor(new SetSpawn(this));
+
+        this.data = new DataManager(this);
 
         config.options().copyDefaults(true);
         saveConfig();

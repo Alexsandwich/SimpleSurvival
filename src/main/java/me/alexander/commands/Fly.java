@@ -31,7 +31,7 @@ public class Fly implements CommandExecutor {
             if (player.hasPermission("simplesurvival.fly")) {
                 flyMethod(player);
             } else if (args.length == 1) {
-                // Flying other people still needs to be fixed
+                //TODO Flying other people still needs to be fixed
                 if (player.hasPermission("simplesurvival.flyother")) {
                     Player target = Bukkit.getPlayer(args[0]);
                     flyMethod(target);

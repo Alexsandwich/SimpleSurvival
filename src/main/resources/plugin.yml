@@ -7,3 +7,7 @@ commands:
   fly:
     usage: /<command>
     description: Fly
+  setspawn:
+    usage: /<command>
+    description: setspawn
+
