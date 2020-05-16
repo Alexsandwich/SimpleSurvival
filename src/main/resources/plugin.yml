@@ -2,6 +2,7 @@ name: SimpleSurvival
 main: me.alexander.SimpleSurvival
 version: 0.1.0
 author: Alexander Milanovich
+depend: [Vault]
 
 commands:
   fly:
@@ -10,4 +11,8 @@ commands:
   setspawn:
     usage: /<command>
     description: setspawn
+  balance:
+    usage: /<command>
+    description: setspawn
+
 
