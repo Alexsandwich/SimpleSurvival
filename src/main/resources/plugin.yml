@@ -1,0 +1,9 @@
+name: SimpleSurvival
+main: me.alexander.SimpleSurvival
+version: 0.1.0
+author: Alexander Milanovich
+
+commands:
+  fly:
+    usage: /<command>
+    description: Fly
