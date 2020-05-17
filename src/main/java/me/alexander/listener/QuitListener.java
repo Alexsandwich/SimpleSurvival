@@ -20,5 +20,6 @@ public class QuitListener implements Listener {
         Player player = e.getPlayer();
         plugin.quitmsg = plugin.quitmsg.replace("%player%", player.getName());
         e.setQuitMessage(plugin.quitmsg);
+
     }
 }

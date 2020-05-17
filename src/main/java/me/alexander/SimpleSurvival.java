@@ -7,9 +7,14 @@ import me.alexander.listener.QuitListener;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scoreboard.*;
 
 import java.util.logging.Logger;
 
@@ -28,6 +33,7 @@ public class SimpleSurvival extends JavaPlugin {
     public final String noPermission = configString("No_Permission");
     public String joinmsg = configString("Join_Message");
     public String quitmsg = configString("Quit_Message");
+    public String ScoreboardTitle = configString("Scoreboard_Title");
 
 
     public void onEnable() {
