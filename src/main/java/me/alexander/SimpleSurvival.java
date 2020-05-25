@@ -1,6 +1,7 @@
 package me.alexander;
 
 import me.alexander.commands.Fly;
+import me.alexander.commands.PlayerList;
 import me.alexander.commands.SetSpawn;
 import me.alexander.listener.JoinListener;
 import me.alexander.listener.QuitListener;
@@ -35,11 +36,11 @@ public class SimpleSurvival extends JavaPlugin {
     public String quitmsg = configString("Quit_Message");
     public String ScoreboardTitle = configString("Scoreboard_Title");
 
-
     public void onEnable() {
         Bukkit.getConsoleSender().sendMessage(ChatColor.GREEN + "Simple Survival Version: " + getDescription().getVersion() + " has been enabled");
         this.getCommand("fly").setExecutor(new Fly(this));
         this.getCommand("setspawn").setExecutor(new SetSpawn(this));
+        this.getCommand("playerlist").setExecutor(new PlayerList(this));
 
         Bukkit.getServer().getPluginManager().registerEvents(new JoinListener(this), (Plugin) this);
         Bukkit.getServer().getPluginManager().registerEvents(new QuitListener(this), (Plugin) this);
