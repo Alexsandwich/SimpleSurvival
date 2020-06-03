@@ -3,6 +3,8 @@ main: me.alexander.SimpleSurvival
 version: 0.1.0
 author: Alexander Milanovich
 depend: [Vault]
+softdepend: [PlaceholderAPI]
+api-version: 1.13
 
 commands:
   fly:
@@ -14,5 +16,14 @@ commands:
   balance:
     usage: /<command>
     description: setspawn
+  playerlist:
+    aliases: [list]
+    usage: /<command>
+    description: setspawn
+  pets:
+    aliases: [pet]
+    usage: /<command>
+    description: pets!
+
 
 
