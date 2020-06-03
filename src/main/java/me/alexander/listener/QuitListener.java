@@ -21,7 +21,6 @@ public class QuitListener implements Listener {
         Player player = e.getPlayer();
         String joinText = plugin.quitmsg;
 
-        // We parse the placeholders using "setPlaceholders"
         joinText = PlaceholderAPI.setPlaceholders(e.getPlayer(), joinText);
 
         e.setQuitMessage(joinText);

@@ -1,6 +1,7 @@
 package me.alexander.commands;
 
 import me.alexander.SimpleSurvival;
+import me.alexander.api.EntityBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -35,12 +36,12 @@ public class PlayerList implements Listener, CommandExecutor {
         if (sender instanceof Player) {
             Player player = (Player) sender;
             openMenu(player);
-        }
+            }
         return true;
     }
 
     public Inventory gui = Bukkit.createInventory(null, 45, ChatColor.BLUE + "Player List");
-    
+
     public void openMenu(Player player) {
         ArrayList<Player> list = new ArrayList<Player>(player.getServer().getOnlinePlayers());
         Inventory gui = Bukkit.createInventory(player, 45, ChatColor.BLUE + "Player List");
