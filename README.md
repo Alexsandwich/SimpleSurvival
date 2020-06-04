@@ -1,15 +1,17 @@
 # SimpleSurvival
 This spigot plugin is a all in one survival server plugin. The goal of this plugin is to make it very simple to run a survival type server. 
 
-This plugin will provide the basic commands. Commands such as:
+## Features
+* Join and Quit Message
+* API Support
+* Chat Censor
 
-* /tpa
+## Commands
 * /spawn
-* /home
-* /fly (admin)
-
-...and more!
-
+* /setspawn
+* /playerlist
+* /fly
+.....
 
 ## Installation 
 * Step 1: Download the SimpleSurvival.jar , PlaceholderAPI.jar , and Protocollib.jar
