@@ -11,7 +11,7 @@ This plugin will provide the basic commands. Commands such as:
 ...and more!
 
 
-##Installation 
+## Installation 
 * Step 1: Download the SimpleSurvival.jar and PlaceholderAPI.jar
 * Step 2: Place the plugins in your plugin folder
 * Step 3: Start your server
