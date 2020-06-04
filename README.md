@@ -12,7 +12,7 @@ This plugin will provide the basic commands. Commands such as:
 
 
 ## Installation 
-* Step 1: Download the SimpleSurvival.jar and PlaceholderAPI.jar
+* Step 1: Download the SimpleSurvival.jar , PlaceholderAPI.jar , and Protocollib.jar
 * Step 2: Place the plugins in your plugin folder
 * Step 3: Start your server
 * Step 4 (Only When First setting up plugin): Do the following two commands (/papi ecloud download Player) and (/papi reload)
