@@ -1,13 +1,13 @@
 package me.alexander;
 
-import me.alexander.commands.Fly;
+import me.alexander.commands.staff.Fly;
 import me.alexander.commands.PlayerList;
 import me.alexander.commands.SetSpawn;
+import me.alexander.commands.Spawn;
 import me.alexander.listener.JoinListener;
 import me.alexander.listener.QuitListener;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
@@ -32,6 +32,8 @@ public class SimpleSurvival extends JavaPlugin {
     public String joinmsg = configString("Join_Message");
     public String quitmsg = configString("Quit_Message");
     public String ScoreboardTitle = configString("Scoreboard_Title");
+    public String setspawn = configString("SetSpawn");
+    public String spawn = configString("Spawn");
 
     public void onEnable() {
 
@@ -40,6 +42,7 @@ public class SimpleSurvival extends JavaPlugin {
             this.getCommand("fly").setExecutor(new Fly(this));
             this.getCommand("setspawn").setExecutor(new SetSpawn(this));
             this.getCommand("playerlist").setExecutor(new PlayerList(this));
+            this.getCommand("spawn").setExecutor(new Spawn(this));
             Bukkit.getServer().getPluginManager().registerEvents(new JoinListener(this), (Plugin) this);
             Bukkit.getServer().getPluginManager().registerEvents(new QuitListener(this), (Plugin) this);
             Bukkit.getServer().getPluginManager().registerEvents(new PlayerList(this), (Plugin) this);

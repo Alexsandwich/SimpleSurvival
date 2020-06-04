@@ -29,8 +29,5 @@ public class JoinListener implements Listener {
 
         e.setJoinMessage(joinText);
 
-        if (player.isOp()) {
-            player.setPlayerListName(ChatColor.RED + player.getName());
-        }
     }
 }

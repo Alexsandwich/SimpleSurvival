@@ -34,13 +34,15 @@ public class SetSpawn implements CommandExecutor {
             Player player = (Player) sender;
             if(player.hasPermission("simplesurvival.setspawn")){
                 Location main = player.getLocation();
+                player.getWorld().setSpawnLocation(main.getBlockX(), main.getBlockY(), main.getBlockZ());
+                player.sendMessage(plugin.setspawn);
                 //setSpawnLocation(main.getWorld().getName(), main.getX(), main.getY(), main.getZ(), main.getYaw(), main.getPitch());
-                data.saveConfig();
+                //data.saveConfig();
         }
-        return false;
+        return true;
     }
 
-    //TODO Fix Data Save
+    /** TODO Fix Data Save
     public void setSpawnLocation(String world, double x, double y, double z, float yaw, float pitch) {
 
         data.getConfig().set("world", world);
@@ -51,5 +53,6 @@ public class SetSpawn implements CommandExecutor {
         data.getConfig().set("pitch", Float.valueOf(pitch));
 
     }
+     **/
 
 }

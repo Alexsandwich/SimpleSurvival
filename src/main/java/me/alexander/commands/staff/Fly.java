@@ -1,4 +1,4 @@
-package me.alexander.commands;
+package me.alexander.commands.staff;
 
 import me.alexander.SimpleSurvival;
 import org.bukkit.Bukkit;

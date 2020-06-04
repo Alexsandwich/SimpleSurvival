@@ -2,28 +2,24 @@ name: SimpleSurvival
 main: me.alexander.SimpleSurvival
 version: 0.1.0
 author: Alexander Milanovich
-depend: [Vault]
+depend: [ProtocolLib]
 softdepend: [PlaceholderAPI]
 api-version: 1.13
 
 commands:
   fly:
     usage: /<command>
-    description: Fly
+    description: By doing this command, you can make yourself fly or others fly
   setspawn:
     usage: /<command>
-    description: setspawn
-  balance:
+    description: Use this command to set the world spawn
+  spawn:
     usage: /<command>
-    description: setspawn
+    description: Use this command to teleport to spawn
   playerlist:
     aliases: [list]
     usage: /<command>
-    description: setspawn
-  pets:
-    aliases: [pet]
-    usage: /<command>
-    description: pets!
+    description: This command will show you a list of players in a gui
 
 
 
