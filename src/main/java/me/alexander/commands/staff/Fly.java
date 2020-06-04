@@ -23,7 +23,7 @@ public class Fly implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage(plugin.not_player);
+            sender.sendMessage(plugin.setPrefix(plugin.not_player));
             return true;
         }
         Player player = (Player) sender;
@@ -37,7 +37,7 @@ public class Fly implements CommandExecutor {
                     flyMethod(target);
                 }
             } else {
-                player.sendMessage(plugin.noPermission);
+                player.sendMessage(plugin.setPrefix(plugin.noPermission));
                 }
         }
         return true;
@@ -47,13 +47,13 @@ public class Fly implements CommandExecutor {
                 if (list_flying_players.contains(player)) {
                     player.setFlying(false);
                     player.setAllowFlight(false);
-                    player.sendMessage(plugin.flydisable);
+                    player.sendMessage(plugin.setPrefix(plugin.flydisable));
                     list_flying_players.remove(player);
                 } else if (!list_flying_players.contains(player)) {
                     list_flying_players.add(player);
                     player.setAllowFlight(true);
                     player.setFlying(true);
-                    player.sendMessage(plugin.flyenabled);
+                    player.sendMessage(plugin.setPrefix(plugin.flyenabled));
                 }
             }
         }

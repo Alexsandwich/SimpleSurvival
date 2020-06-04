@@ -28,16 +28,17 @@ public class SetSpawn implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage(plugin.not_player);
+            sender.sendMessage(plugin.setPrefix(plugin.not_player));
             return true;
         }
             Player player = (Player) sender;
-            if(player.hasPermission("simplesurvival.setspawn")){
+            if(player.hasPermission("simplesurvival.setspawn")) {
                 Location main = player.getLocation();
                 player.getWorld().setSpawnLocation(main.getBlockX(), main.getBlockY(), main.getBlockZ());
-                player.sendMessage(plugin.setspawn);
-                //setSpawnLocation(main.getWorld().getName(), main.getX(), main.getY(), main.getZ(), main.getYaw(), main.getPitch());
-                //data.saveConfig();
+                    //setSpawnLocation(main.getWorld().getName(), main.getX(), main.getY(), main.getZ(), main.getYaw(), main.getPitch());
+                    //data.saveConfig();
+                    player.sendMessage(plugin.setPrefix(plugin.setspawn));
+
         }
         return true;
     }

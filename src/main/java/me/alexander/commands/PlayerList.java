@@ -16,6 +16,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.SkullMeta;
@@ -60,13 +61,17 @@ public class PlayerList implements Listener, CommandExecutor {
     }
 
     @EventHandler(priority = EventPriority.HIGHEST)
-    public void InventoryClickEvent(final InventoryClickEvent e){
+    public void InventoryClickEvent(final InventoryClickEvent e) {
         if (e.getView().getTitle().equals(ChatColor.BLUE + "Player List")) {
             Player player = (Player) e.getWhoClicked();
             ItemStack itemClicked = e.getCurrentItem();
-            if(e.isRightClick() || e.isLeftClick()){
+            if (e.isRightClick() || e.isLeftClick()) {
+                e.setCancelled(true);
+            } else if (e.getClick().isKeyboardClick()) {
                 e.setCancelled(true);
             }
+
         }
     }
+
 }

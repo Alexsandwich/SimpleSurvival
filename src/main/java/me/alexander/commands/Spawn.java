@@ -18,13 +18,13 @@ public class Spawn implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String s, String[] strings) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage(plugin.not_player);
+            sender.sendMessage(plugin.setPrefix(plugin.not_player));
             return true;
         }
         Player player = (Player) sender;
         if (player.hasPermission("simplesurvival.spawn")) {
             player.teleport(player.getWorld().getSpawnLocation());
-            player.sendMessage(plugin.spawn);
+            player.sendMessage(plugin.setPrefix(plugin.spawn));
 
         }
         return true;
