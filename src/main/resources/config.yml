@@ -1,6 +1,8 @@
 # This is the main config file for SimpleSurvival
 # Here you'll find customization options for every aspect of the plugin
 # Make sure that you follow the proper formatting for config
+Enable_Prefix: "True"
+Prefix: "[Server]"
 Fly_Enabled: "&eFly Has Been Enabled"
 Fly_Disabled: "&cFly Has Been Disabled"
 Not_Player: "&cSorry, you must be a player to do this"
@@ -10,3 +12,4 @@ Quit_Message: "&8[&e+&8]&e %player_name% has left the server!"
 Scoreboard_Title: "&a[Test Server]"
 SetSpawn: "&aYou've set the spawn"
 Spawn: "&aYou've been teleported to spawn"
+Swear: "&cPlease do not swear!"

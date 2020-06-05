@@ -20,6 +20,9 @@ commands:
     aliases: [list]
     usage: /<command>
     description: This command will show you a list of players in a gui
+  screload:
+    usage: /<command>
+    description: Reload config
 
 
 
