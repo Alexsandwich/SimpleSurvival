@@ -17,6 +17,13 @@ public class Vanish implements CommandExecutor {
     //TODO build a vanish system
     @Override
     public boolean onCommand(CommandSender sender, Command command, String s, String[] strings) {
+        if (!(sender instanceof Player)) {
+            sender.sendMessage(plugin.setPrefix(plugin.not_player));
+            return true;
+        }
+
+
+
         return true;
     }
 }
