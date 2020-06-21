@@ -2,8 +2,6 @@ package me.alexander.commands;
 
 import me.alexander.DataManager;
 import me.alexander.SimpleSurvival;
-import me.alexander.api.EntityBuilder;
-import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -12,8 +10,6 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 
-import java.io.File;
-import java.io.IOException;
 
 public class SetSpawn implements CommandExecutor {
 

@@ -1,14 +1,10 @@
 package me.alexander.commands.staff;
 
 import me.alexander.SimpleSurvival;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 
-import java.util.UUID;
 
 public class StaffChat implements CommandExecutor {
 

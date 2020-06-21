@@ -23,6 +23,10 @@ commands:
   screload:
     usage: /<command>
     description: Reload config
-
-
+  restoreinv:
+    usage: /<command>
+    description: Restore a player's inventory.
+  report:
+    description: Report an abusive player.
+    usage: /<command>
 

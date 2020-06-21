@@ -1,14 +1,12 @@
 package me.alexander.commands;
 
 import me.alexander.SimpleSurvival;
-import me.alexander.api.EntityBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
@@ -16,13 +14,11 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.SkullMeta;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class PlayerList implements Listener, CommandExecutor {
 
@@ -63,8 +59,6 @@ public class PlayerList implements Listener, CommandExecutor {
     @EventHandler(priority = EventPriority.HIGHEST)
     public void InventoryClickEvent(final InventoryClickEvent e) {
         if (e.getView().getTitle().equals(ChatColor.BLUE + "Player List")) {
-            Player player = (Player) e.getWhoClicked();
-            ItemStack itemClicked = e.getCurrentItem();
             if (e.isRightClick() || e.isLeftClick()) {
                 e.setCancelled(true);
             } else if (e.getClick().isKeyboardClick()) {

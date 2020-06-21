@@ -6,13 +6,18 @@ import com.comphenix.protocol.ProtocolManager;
 import com.comphenix.protocol.events.PacketAdapter;
 import com.comphenix.protocol.events.PacketContainer;
 import com.comphenix.protocol.events.PacketEvent;
+import me.alexander.commands.Report;
 import me.alexander.commands.staff.Fly;
 import me.alexander.commands.PlayerList;
 import me.alexander.commands.SetSpawn;
 import me.alexander.commands.Spawn;
 import me.alexander.commands.staff.ReloadConfig;
+import me.alexander.commands.staff.RestoreInv;
 import me.alexander.events.JoinListener;
 import me.alexander.events.QuitListener;
+import me.alexander.events.Reports;
+import me.alexander.events.onDeath;
+import me.alexander.gui.Reportgui;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -52,9 +57,8 @@ public class SimpleSurvival extends JavaPlugin implements Listener {
     public String prefix = configString("Prefix");
     public String prefixenabled = configString("Enable_Prefix");
 
-    private ProtocolManager protocolManager;
-
     public File cfile;
+
 
     public void onEnable() {
 
@@ -65,12 +69,16 @@ public class SimpleSurvival extends JavaPlugin implements Listener {
             this.getCommand("playerlist").setExecutor(new PlayerList(this));
             this.getCommand("spawn").setExecutor(new Spawn(this));
             this.getCommand("screload").setExecutor(new ReloadConfig(this));
+            this.getCommand("restoreinv").setExecutor(new RestoreInv(this));
+            this.getCommand("report").setExecutor(new Report(this));
             Bukkit.getServer().getPluginManager().registerEvents(new JoinListener(this), (Plugin) this);
             Bukkit.getServer().getPluginManager().registerEvents(new QuitListener(this), (Plugin) this);
             Bukkit.getServer().getPluginManager().registerEvents(new PlayerList(this), (Plugin) this);
+            Bukkit.getServer().getPluginManager().registerEvents(new Reports(this), this);
             Bukkit.getServer().getPluginManager().registerEvents(this, this);
+            new Reportgui(this);
+            Bukkit.getServer().getPluginManager().registerEvents(new onDeath(this),this);
             this.data = new DataManager(this);
-            protocolManager = ProtocolLibrary.getProtocolManager();
 
             config = getConfig();
             config.options().copyDefaults(true);
