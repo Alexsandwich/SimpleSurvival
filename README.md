@@ -1,4 +1,7 @@
 # SimpleSurvival
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d71423a7f8b64a1db9e0a331b3ef5f37)](https://app.codacy.com/manual/Alexsandwich/SimpleSurvival?utm_source=github.com&utm_medium=referral&utm_content=Alexsandwich/SimpleSurvival&utm_campaign=Badge_Grade_Dashboard)
+
 This spigot plugin is a all in one survival server plugin. The goal of this plugin is to make it very simple to run a survival type server. 
 
 ## Features
